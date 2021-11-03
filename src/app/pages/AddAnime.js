@@ -30,7 +30,7 @@ export default function AddAnime() {
     const history = useHistory()
 
     const addToWatch = (e) => {
-        Axios.post("http://localhost:3001/addToWatch",
+        Axios.post("https://crud-mern-memoria.herokuapp.com//addToWatch",
             {name: name, episodes: episodes, currentEpisode: currentEpisode})
             .then(() => {
                 setListOfAnimes([...listOfAnimes, {name: name, episodes: episodes, currentEpisode: currentEpisode}]);

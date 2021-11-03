@@ -34,7 +34,7 @@ export default function Home(props) {
 
     //Read Data
     useEffect(() => {
-        Axios.get("http://localhost:3001/anime",)
+        Axios.get("https://crud-mern-memoria.herokuapp.com/anime",)
             .then((response) => {
                 setListOfAnimes(response.data)
             }).catch(() => {
@@ -45,7 +45,7 @@ export default function Home(props) {
     const [newCurrentEpisode, setNewCurrentEpisode] = useState('');
 
     const updateToWatch = (id) => {
-        Axios.put("http://localhost:3001/update",
+        Axios.put("https://crud-mern-memoria.herokuapp.com/update",
         { id: id, newCurrentEpisode: newCurrentEpisode }
         ).then(() => {
             setListOfAnimes(listOfAnimes.map((value) => {
@@ -58,7 +58,7 @@ export default function Home(props) {
 
     //Delete Data
     const deleteToWatch = (id) => {
-        Axios.delete(`http://localhost:3001/delete/${id}`).then(() => {
+        Axios.delete(`https://crud-mern-memoria.herokuapp.com/delete/${id}`).then(() => {
             setListOfAnimes(listOfAnimes.filter((val) => {
                 return val._id != id;
             }));

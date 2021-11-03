@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 const GlobalStyle = createGlobalStyle`
     body {
         background-color: #ffb300;
+        font-family: 'Roboto', sans-serif;
     }
     a {
         text-decoration: none;
